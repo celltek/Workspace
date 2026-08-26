@@ -1,0 +1,43 @@
+name: New Game
+description: Request for new game 
+labels: [new]
+body:
+- type: input
+  attributes:
+    label: Game Name
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Main Website Url
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Steam Store Url
+  validations:
+    required: false
+- type: input
+  attributes:
+    label: Changelog Url
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: SteamID
+  validations:
+    required: true
+- type: checkboxes
+  id: cat-players
+  attributes:
+    label: I confirm that the game has more than 100 active players daily.
+    options:
+      - label: "Yes"
+        required: true
+- type: checkboxes
+  id: cat-linux
+  attributes:
+    label: I confirm that the game is available for Linux Server
+    options:
+      - label: Is Linux
+        required: true
